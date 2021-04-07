@@ -1,0 +1,33 @@
+body{
+    width: 300px;
+    
+    padding: 50px;
+    margin: 20px;
+  }
+  .stButton>button{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left:100px;
+    margin-bottom:20px;
+    font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  outline: none;
+  color:whitesmoke;
+  background-color:#464e5f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px darkgrey;
+
+}
+.stButton>button:hover {background-color:slategray;
+color:black;}
+
+.stButton>button:active {
+  background-color: slategray;
+  box-shadow: 0 5px darkgrey;
+  transform: translateY(4px);
+}
