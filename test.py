@@ -8,7 +8,7 @@ from io import BytesIO
 import SessionState
 import pandas as pd
 
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect('database1.db')
 c = conn.cursor()
 def create_usertable():
 	c.execute('CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)')
