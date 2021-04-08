@@ -40,7 +40,7 @@ def main1():
     menu=["Home","SignUp"]
     st.sidebar.markdown("""<link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
     <div>
-        <p style="color:black;font-family: 'Bayon';font-size:20px;margin-bottom:-30px;">Navigation Bar</p>
+        <p style="color:black;font-family: 'Bayon';font-size:20px;">Navigation Bar</p>
     </div>""",unsafe_allow_html=True)
     choice=st.sidebar.selectbox("",menu)          
     if choice=="Home":
@@ -101,7 +101,7 @@ def mainapp():
     st.markdown(temp,unsafe_allow_html=True)
     st.sidebar.markdown("""<link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
     <div>
-        <p style="color:black;font-family: 'Bayon';font-size:20px;margin-bottom:-30px;">Select Content Image</p>
+        <p style="color:black;font-family: 'Bayon';font-size:20px;">Select Content Image</p>
     </div>""",unsafe_allow_html=True)
     img=st.sidebar.selectbox(
         '',
@@ -110,7 +110,7 @@ def mainapp():
 
     st.sidebar.markdown("""<link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
     <div>
-        <p style="color:black;font-family: 'Bayon';font-size:20px;margin-bottom:-30px;">Select Style</p>
+        <p style="color:black;font-family: 'Bayon';font-size:20px;">Select Style</p>
     </div>""",unsafe_allow_html=True)
     
     style_name=st.sidebar.selectbox(
