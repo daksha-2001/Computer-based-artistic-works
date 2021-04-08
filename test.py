@@ -50,8 +50,8 @@ def main1():
         create_usertable()
         temp="""
     <link href='https://fonts.googleapis.com/css?family=Bigshot One' rel='stylesheet'>
-    <h3 style="margin-top:-35px;margin-bottom:-10px;color:black;text-align:center;font-family: 'Bigshot One';font-size:30px;">SIGNUP</h3>
-    
+    <h3 style="margin-top:-35px;margin-bottom:-10px;color:black;text-align:center;font-family: 'Bigshot One';font-size:30px;">SIGNUP
+    <span style='font-size:30px;'>&#128519;</span></h3>
     """
         def local_css(file_name):
             with open(file_name) as f:
@@ -176,8 +176,7 @@ def mainapp():
         t1="""
         <link href='https://fonts.googleapis.com/css?family=Bigshot One' rel='stylesheet'>
         <div>
-    <h3 style="color:black;margin-bottom:-30px;font-family: 'Bigshot One';font-size:30px;">Have You Registered?</h3>
-    </div>
+    <h3 style="color:black;margin-bottom:-30px;font-family: 'Bigshot One';font-size:30px;">Have You Registered?<span style='font-size:30px;'>&#129300;</span></h3> </div>
         """
         st.markdown(t1,unsafe_allow_html=True)
         radio=st.radio("",('Yes','No'))
