@@ -2,7 +2,4 @@
 Streamlit 
 torch 
 pandas
-sqlite
-PIL
-vgg
 css
