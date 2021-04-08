@@ -1,6 +1,6 @@
 
-Streamlit 0.78.0
-torch 1.8.0
+Streamlit 
+torch 
 pandas
 sqlite
 PIL
