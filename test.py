@@ -188,7 +188,7 @@ def mainapp():
             user=st.text_input("","")
             st.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
             <div>
-                <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-20px;">Enter Password..</h3>
+                <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-10px;">Enter Password..</h3>
             </div>""",unsafe_allow_html=True)
             passw=st.text_input("","",type="password")
             if st.button("Go"):
