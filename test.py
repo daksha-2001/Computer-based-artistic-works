@@ -65,7 +65,7 @@ def main1():
         
         col1.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
         <div>
-            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-10px;">Username</h3>
+            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;">Username</h3>
         </div>""",unsafe_allow_html=True)
         new_user=col1.text_input("") 
         col1.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
