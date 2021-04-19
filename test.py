@@ -83,11 +83,11 @@ def main1():
         z=0
         for i in range(len(new_pasword)):
             if new_pasword[i] in numerics:
-                x=x+1
+                x=1
             elif new_pasword[i] in capital_alphabets:
-                y=y+1
+                y=1
             elif new_pasword[i] in special_chars:
-                z=z+1
+                z=1
             
         sum=x+y+z   
         if col1.button("SignUp"):
