@@ -8,7 +8,7 @@ from io import BytesIO
 import SessionState
 import pandas as pd
 
-conn = sqlite3.connect('database1.db')
+conn = sqlite3.connect('database.db')
 c = conn.cursor()
 def create_usertable():
 	c.execute('CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)')
@@ -70,10 +70,26 @@ def main1():
         new_user=col1.text_input("") 
         col1.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
         <div>
-            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-10px;">Password</h3>
+            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;">Password</h3>
         </div>""",unsafe_allow_html=True)
         new_pasword=col1.text_input("",type="password")
 
+        numerics="0123456789"
+        capital_alphabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        special_chars="#$@"
+        sum=0
+        x=0
+        y=0
+        z=0
+        for i in range(len(new_pasword)):
+            if new_pasword[i] in numerics:
+                x=x+1
+            elif new_pasword[i] in capital_alphabets:
+                y=y+1
+            elif new_pasword[i] in special_chars:
+                z=z+1
+            
+        sum=x+y+z   
         if col1.button("SignUp"):
             if(new_user=="admin" and new_pasword=="admin123-daksha"):
                 user_result=view_all_users()
@@ -81,6 +97,10 @@ def main1():
                 col1.dataframe(clean_db)
             elif(new_user=="" or new_pasword==""):
                 col1.info("Please don't leave Username or password blank!")
+            elif(len(new_pasword)<=6):
+               col1.info("Minimum length of password is atleast 6 characters")
+            elif(sum<=3):
+                col1.info("Password should be minimum 6 characters and should have atleast 1 special character(#,$,@) 1 Captial Character and 1 numeric character!!")
             else:
                 result=login_user(new_user,new_pasword)
                 if result:
@@ -176,19 +196,19 @@ def mainapp():
         t1="""
         <link href='https://fonts.googleapis.com/css?family=Bigshot One' rel='stylesheet'>
         <div>
-    <h3 style="color:black;font-family: 'Bigshot One';font-size:30px;">Have You Registered?<span style='font-size:30px;'>&#129300;</span></h3> </div>
+    <h3 style="color:black;margin-bottom:-30px;font-family: 'Bigshot One';font-size:30px;">Have You Registered?<span style='font-size:30px;'>&#129300;</span></h3> </div>
         """
         st.markdown(t1,unsafe_allow_html=True)
         radio=st.radio("",('Yes','No'))
         if(radio=='Yes'):
             st.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
         <div>
-            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-10px;">Enter Username..</h3>
+            <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;">Enter Username..</h3>
         </div>""",unsafe_allow_html=True)
             user=st.text_input("","")
             st.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
             <div>
-                <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;margin-top:-10px;">Enter Password..</h3>
+                <h3 style="color:black;font-family: 'Bree Serif';font-size:20px;margin-bottom:-20px;">Enter Password..</h3>
             </div>""",unsafe_allow_html=True)
             passw=st.text_input("","",type="password")
             if st.button("Go"):
@@ -206,4 +226,4 @@ def mainapp():
        
 if __name__=="__main__":
     main1()
-    
+      
