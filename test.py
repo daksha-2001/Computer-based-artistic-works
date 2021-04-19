@@ -99,7 +99,7 @@ def main1():
                 col1.info("Please don't leave Username or password blank!")
             elif(len(new_pasword)<6):
                col1.info("Minimum length of password is atleast 6 characters")
-            elif(sum<=3):
+            elif(sum<3):
                 col1.info("Password should be minimum 6 characters and should have atleast 1 special character(#,$,@) 1 Captial Character and 1 numeric character!!")
             else:
                 result=login_user(new_user,new_pasword)
