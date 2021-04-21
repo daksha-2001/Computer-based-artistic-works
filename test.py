@@ -196,7 +196,7 @@ def mainapp():
         t1="""
         <link href='https://fonts.googleapis.com/css?family=Bigshot One' rel='stylesheet'>
         <div>
-    <h3 style="color:black;margin-bottom:-30px;font-family: 'Bigshot One';font-size:30px;">Have You Registered?<span style='font-size:30px;'>&#129300;</span></h3> </div><br><br><br>
+    <h3 style="color:black;margin-bottom:-30px;font-family: 'Bigshot One';font-size:30px;">Have You Registered?<span style='font-size:30px;'>&#129300;</span></h3> </div><br><br>
         """
         st.markdown(t1,unsafe_allow_html=True)
         radio=st.radio("",('Yes','No'))
