@@ -57,7 +57,7 @@ def main1():
             with open(file_name) as f:
                 st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
         local_css("s2.css")
-        col1,col2=st.beta_columns(2)
+        col1,col2=st.columns(2)
         col1.markdown(temp,unsafe_allow_html=True)
         imag=Image.open("signin-image.jpg")
         col2.image(imag,width=350)
