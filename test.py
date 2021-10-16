@@ -140,7 +140,7 @@ def mainapp():
     model="saved_models/"+style_name+".pth"
     style_image="images/style-images/"+style_name+".jpg"
     input_image="images/content-images/"+img
-    col1,col2=st.beta_columns(2)
+    col1,col2=st.columns(2)
     col1.markdown("""<link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
         <div>
     <h3 style="color:black;font-family: 'Bree Serif';font-size:30px;">Source Image:</h3>
