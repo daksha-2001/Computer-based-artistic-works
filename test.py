@@ -119,7 +119,7 @@ def mainapp():
     </div>
     """
     st.markdown(temp,unsafe_allow_html=True)
-    st.sidebar.markdown("""<link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+    st.sidebar.markdown("""<link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'><br>
     <div>
         <p style="color:black;font-family: 'Bayon';font-size:20px;">Select Content Image</p>
     </div>""",unsafe_allow_html=True)
