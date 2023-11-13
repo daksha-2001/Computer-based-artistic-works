@@ -6,7 +6,6 @@ import style
 import base64
 from io import BytesIO
 import SessionState
-import pandas as pd
 
 conn = sqlite3.connect('data1234.db')
 c = conn.cursor()
